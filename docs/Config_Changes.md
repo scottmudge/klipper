@@ -8,6 +8,14 @@ All dates in this document are approximate.
 
 ## Changes
 
+20240126: The `max_accel_to_decel` parameter in the `[printer]` config
+section has been deprecated. The `ACCEL_TO_DECEL` parameter of the
+`SET_VELOCITY_LIMIT` command has been deprecated. The
+`printer.toolhead.max_accel_to_decel` status has been removed. Use the
+[minimum_cruise_ratio parameter](./Config_Reference.md#printer)
+instead. The deprecated features will be removed in the near future,
+and using them in the interim may result in subtly different behavior.
+
 20230826: If `safe_distance` is set or calculated to be 0 in `[dual_carriage]`,
 the carriages proximity checks will be disabled as per documentation. A user
 may wish to configure `safe_distance` explicitly to prevent accidental crashes
