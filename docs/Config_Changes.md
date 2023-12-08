@@ -16,6 +16,12 @@ section has been deprecated. The `ACCEL_TO_DECEL` parameter of the
 instead. The deprecated features will be removed in the near future,
 and using them in the interim may result in subtly different behavior.
 
+20231207: Several undocumented config parameters in the `[printer]`
+config section have been removed (the buffer_time_low,
+buffer_time_high, buffer_time_start, and move_flush_time parameters).
+
+20231110: Klipper v0.12.0 released.
+
 20230826: If `safe_distance` is set or calculated to be 0 in `[dual_carriage]`,
 the carriages proximity checks will be disabled as per documentation. A user
 may wish to configure `safe_distance` explicitly to prevent accidental crashes
