@@ -8,6 +8,12 @@ All dates in this document are approximate.
 
 ## Changes
 
+20231216: The `[hall_filament_width_sensor]` is changed to trigger filament runout
+when the thickness of the filament exceeds `max_diameter`. The maximum diameter
+defaults to `default_nominal_filament_diameter + max_difference`. See
+[[hall_filament_width_sensor] configuration
+reference](./Config_Reference.md#hall_filament_width_sensor) for more details.
+
 20240126: The `max_accel_to_decel` parameter in the `[printer]` config
 section has been deprecated. The `ACCEL_TO_DECEL` parameter of the
 `SET_VELOCITY_LIMIT` command has been deprecated. The
