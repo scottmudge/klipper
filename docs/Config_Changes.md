@@ -29,6 +29,14 @@ instead. The option will be removed in the near future.
 Replace with `value` and `shutdown_value` parameters.  The option will
 be removed in the near future.
 
+20240126: The `max_accel_to_decel` parameter in the `[printer]` config
+section has been deprecated. The `ACCEL_TO_DECEL` parameter of the
+`SET_VELOCITY_LIMIT` command has been deprecated. The
+`printer.toolhead.max_accel_to_decel` status has been removed. Use the
+[minimum_cruise_ratio parameter](./Config_Reference.md#printer)
+instead. The deprecated features will be removed in the near future,
+and using them in the interim may result in subtly different behavior.
+
 20231216: The `[hall_filament_width_sensor]` is changed to trigger filament runout
 when the thickness of the filament exceeds `max_diameter`. The maximum diameter
 defaults to `default_nominal_filament_diameter + max_difference`. See

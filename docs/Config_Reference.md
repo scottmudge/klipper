@@ -101,19 +101,18 @@ max_accel:
 #   Most moves will accelerate to a cruising speed, travel at that
 #   cruising speed, and then decelerate. However, some moves that
 #   travel a short distance could nominally accelerate and then
-#   immediately decelerate. This option can reduce the top speed of
-#   these moves to ensure there is always a minimum distance traveled
-#   at a cruising speed. That is, it enforces a minimum distance
-#   traveled at cruising speed relative to the total distance
-#   traveled. It is intended to reduce the top speed of short zigzag
-#   moves (and thus reduce printer vibration from these moves). For
-#   example, a minimum_cruise_ratio of 0.5 would ensure that a
-#   standalone 1.5mm move would have a minimum cruising distance of
-#   0.75mm. Specify a ratio of 0.0 to disable this feature (there
-#   would be no minimum cruising distance enforced between
-#   acceleration and deceleration). The value specified here may be
-#   changed at runtime using the SET_VELOCITY_LIMIT command. The
-#   default is 0.5.
+#   immediately decelerate. This option reduces the top speed of these
+#   moves to ensure there is always a minimum distance traveled at a
+#   cruising speed. That is, it enforces a minimum distance traveled
+#   at cruising speed relative to the total distance traveled. It is
+#   intended to reduce the top speed of short zigzag moves (and thus
+#   reduce printer vibration from these moves). For example, a
+#   minimum_cruise_ratio of 0.5 would ensure that a standalone 1.5mm
+#   move would have a minimum cruising distance of 0.75mm. Specify a
+#   ratio of 0.0 to disable this feature (there would be no minimum
+#   cruising distance enforced between acceleration and deceleration).
+#   The value specified here may be changed at runtime using the
+#   SET_VELOCITY_LIMIT command. The default is 0.5.
 #square_corner_velocity: 5.0
 #   The maximum velocity (in mm/s) that the toolhead may travel a 90
 #   degree corner at. A non-zero value can reduce changes in extruder
