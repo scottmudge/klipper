@@ -62,7 +62,8 @@ def background_coordinate_descent(printer, adj_params, params, error_func):
         child_conn.send((False, res))
         child_conn.close()
     # Start a process to perform the calculation
-    calc_proc = multiprocessing.Process(target=wrapper)
+    ctx = multiprocessing.get_context('fork') 
+    calc_proc = ctx.Process(target=wrapper)
     calc_proc.daemon = True
     calc_proc.start()
     # Wait for the process to finish

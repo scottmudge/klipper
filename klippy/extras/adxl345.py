@@ -99,7 +99,8 @@ class AccelQueryHelper:
                 f.write("%.6f,%.6f,%.6f,%.6f\n" % (
                     t, accel_x, accel_y, accel_z))
             f.close()
-        write_proc = multiprocessing.Process(target=write_impl)
+        ctx = multiprocessing.get_context('fork')
+        write_proc = ctx.Process(target=write_impl)
         write_proc.daemon = True
         write_proc.start()
 
